@@ -30,10 +30,10 @@ class Modals extends React.Component {
                 <Modal isOpen={this.props.modal} toggle={this.props.toggle} className={this.props.className}>
                     <ModalHeader toggle={this.props.toggle}>Delete</ModalHeader>
                     <ModalBody>
-                        are you sure to delete it? {this.props.id}
+                        are you sure to delete it?
                     </ModalBody>
                     <ModalFooter>
-                        <Button color="danger" onClick={this.delete}>Delete Me!</Button>{' '}
+                        <Button color="danger" onClick={this.delete}>Delete</Button>{' '}
                         <Button color="secondary" onClick={this.props.toggle}>Cancel</Button>
                     </ModalFooter>
                 </Modal>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import ListMhs from './Part/ListBuku';
+import ListBuku from './Part/ListBuku';
 import Navs from './Part/nav';
 import {
     Container,
@@ -40,7 +40,7 @@ class Home extends Component {
                 <Container style={{marginLeft:0, marginTop: 15 }}>
                     <Row>
                         <Col sm="12" md={{ size: 7, offset:20}}>
-                            <ListMhs list={this.state.data} />
+                            <ListBuku list={this.state.data} />
                         </Col>
                     </Row>
                 </Container>

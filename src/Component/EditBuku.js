@@ -5,30 +5,40 @@ import {
     Col,
     Row,
 } from 'reactstrap';
-import Forms from './Part/Form'
+import Forms from './Part/FormEdit'
 import Navs from './Part/nav'
 
 class EditBuku extends React.Component {
     constructor(props){
         super(props)
         this.state = { 
-            nama:'',
-            jurusan:'',
-            kelas:'',
-            id: this.props.match.params.id,
+            data: [],
+            kd_buku:'',
+            judul:'',
+            isbn:'',
+            cover:'',
+            penulis:'',
+            tahun:'',
+            ket:'',
+            kategori:'',
+            no: this.props.match.params.no,
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.InputChangeHandler = this.InputChangeHandler.bind(this)
     }
     componentDidMount(){
-        axios.get('http://localhost:3001/buku' + this.state.id)
-        .then((result) => {
-            const data = result.data.data
+        axios.get('http://localhost:3001/buku/' + this.state.kd_buku)
+        .then((results) => {
+            const data = results.data.data
             this.setState({
-                //data:data
+                kd_buku: data.kd_buku,
                 judul: data.judul,
-                jurusan: data.jurusan,
-                kelas: data.kelas,
+                isbn: data.isbn,
+                cover: data.cover,
+                penulis: data.penulis,
+                tahun: data.tahun,
+                ket: data.ket,
+                kategori: data.kategori,
             })
         })
     }
@@ -67,10 +77,14 @@ class EditBuku extends React.Component {
                         <Col sm="12" md={{ size: 8, offset: 2 }}>
                             <h2 >Edit Buku</h2><br />
                             <Forms
-                                nama={this.state.nama}
-                                jurusan={this.state.jurusan}
-                                kelas={this.state.kelas}
-                                InputChangeHandler={this.InputChangeHandler}
+                                props = {this.state.data}
+                                kd_buku={this.state.kd_buku}
+                                judul={this.state.judul}
+                                isbn={this.state.isbn}
+                                cover={this.state.cover}
+                                kategori={this.state.kategori}
+                                penulis={this.state.penulis}
+                                tahun={this.state.tahun}
                                 handleSubmit={this.handleSubmit}
                             />
 

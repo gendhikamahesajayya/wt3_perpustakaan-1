@@ -25,8 +25,8 @@ class ListBuku extends React.Component {
 
     
     render() {
-        const url = 'http://localhost:3000'
-        console.log(this.props);
+        const url = 'http://localhost:3000/'
+        //console.log(this.props);
         const lists = this.props.list.map((e, i) => {
              return (
                  <tr key={i}>
@@ -57,7 +57,7 @@ class ListBuku extends React.Component {
                             <th>KD_Buku</th>
                             <th>Judul</th>
                             <th>ISBN</th>
-                            <th styles={{width: '50%'}}>Penulis</th>
+                            <th>Penulis</th>
                             <th>Tahun</th>
                             <th>Action</th>
                         </tr>

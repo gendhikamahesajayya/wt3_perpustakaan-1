@@ -34,6 +34,9 @@ class nav extends Component {
                             <NavLink href="/">Home</NavLink>
                         </NavItem>
                         <NavItem>
+                            <NavLink href="/Home">Manage Data</NavLink>
+                        </NavItem>
+                        <NavItem>
                             <NavLink href="/add">Tambah Data</NavLink>
                         </NavItem>
                     </Nav>

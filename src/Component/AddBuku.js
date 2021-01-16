@@ -6,7 +6,7 @@ import {
     Row,
 } from 'reactstrap';
 import Navs from './Part/nav'
-import Forms from './Part/Form'
+import Forms from './Part/FormAdd'
 // import Redirect from 'react-router-dom'
 
 class AddBuku extends React.Component{

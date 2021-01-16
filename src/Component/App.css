@@ -1,0 +1,52 @@
+.result{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p{
+    margin: 10px 0px;
+}
+
+img{
+    width: 400px;
+}
+
+.resultCard{
+    margin: 15px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 8px 7px 13px 0px #dadada;
+    border: 1px solid #e6e6e6;
+    background-color: #ffffff;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+  .column1 {
+    border-width:5px ;
+    float: left;
+    width: 450px;
+    padding: 10px;
+    height: -20px; /* Should be removed. Only for demonstration */
+  }
+
+  .column2 {
+    border-width:5px ;
+    float: left;
+    width: 1000px;
+    padding: 10px;
+    height: -20px; /* Should be removed. Only for demonstration */
+  }

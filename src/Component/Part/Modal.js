@@ -12,12 +12,13 @@ class Modals extends React.Component {
     }
 
     delete(){
-
-        axios.delete('http://localhost:3001/buku/delete', { data: { id: this.props.id }})
+        const url = `http://localhost:3001/buku/` + this.props.kd_buku;
+        axios.delete(url)
            .then((result) => {
             //    const data = result.data.data
-               console.log(result)
+            console.log(result)
                this.props.toggle()
+               window.location.reload();
                //location.reload()
         })
         

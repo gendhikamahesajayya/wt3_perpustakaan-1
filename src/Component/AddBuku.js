@@ -6,16 +6,21 @@ import {
     Row,
 } from 'reactstrap';
 import Navs from './Part/nav'
-import Forms from './Part/FormAdd'
+import Form from './Part/FormAdd'
 // import Redirect from 'react-router-dom'
 
 class AddBuku extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            nama: '',
-            jurusan: '',
-            kelas: '',
+            kd_buku: '',
+            judul: '',
+            isbn: '',
+            cover: '',
+            penulis: '',
+            tahun: '',
+            ket: '',
+            //kategori: '',
             redirect: false
         }
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -34,7 +39,7 @@ class AddBuku extends React.Component{
         e.preventDefault();
         const data = this.state
         delete data.redirect
-        axios.post('http://localhost:3001/buku/add',data)
+        axios.post('http://localhost:3001/buku',data)
             .then((result) => {
                 console.log(result)
                 this.setState({redirect: true})
@@ -54,13 +59,15 @@ class AddBuku extends React.Component{
                     <Row>
                         <Col sm="12" md={{ size: 8, offset: 2 }}>
                             <h2 >Tambah Buku</h2><br/>
-                            <Forms
-                                kd_buku={this.InputChangeHandler}
-                                judul={this.InputChangeHandler}
-                                isbn={this.InputChangeHandler}
-                                cover={this.InputChangeHandler}
-                                penulis={this.InputChangeHandler}
-                                tahun={this.InputChangeHandler}
+                            <Form
+                                kd_buku={this.state.kd_buku}
+                                judul={this.state.judul}
+                                isbn={this.state.isbn}
+                                cover={this.state.cover}
+                                penulis={this.state.penulis}
+                                tahun={this.state.tahun}
+                                ket={this.state.kategori}
+                                InputChangeHandler={this.InputChangeHandler}
                                 handleSubmit={this.handleSubmit}
                             />
                            

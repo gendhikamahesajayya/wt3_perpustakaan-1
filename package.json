@@ -11,6 +11,7 @@
     "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
     "express": "^4.17.1",
+    "location": "0.0.1",
     "mysql": "^2.18.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

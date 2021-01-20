@@ -1,8 +1,5 @@
 import React from 'react';
-import { Table, Button } from 'reactstrap';
-import FontAwesome from 'react-fontawesome';
-// import Pagination from "../components/Pagination";
-import Modals from './Modal';
+
 
 
 class ListBuku extends React.Component {
@@ -28,7 +25,7 @@ class ListBuku extends React.Component {
         //console.log(this.props);
         const lists = this.props.list.map((e, i) => {
              return (
-                <div className="result">
+                
                 <div class="resultCard" >
                 <figure className="image is-48x48">
                   <img
@@ -39,11 +36,11 @@ class ListBuku extends React.Component {
                 <h4 class="bolder">{e.judul}</h4>
                 <span><b>Year: </b>{e.tahun}</span>
               </div>
-              </div>
+              
              )
          })
         return (
-            <div>
+            <div className="result">
                 { lists }
             </div>
         );

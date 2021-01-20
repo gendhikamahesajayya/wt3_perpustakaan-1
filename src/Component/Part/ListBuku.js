@@ -10,7 +10,7 @@ class ListBuku extends React.Component {
         super(props)
         this.state = {
             modal: false,
-            id:''
+            kd_buku:''
         }
 
         this.toggle = this.toggle.bind(this);
@@ -38,7 +38,7 @@ class ListBuku extends React.Component {
                      <td>{e.tahun}</td>
                      <td>
                         <Button color="success" size='xxl' href={url + 'edit/' + e.no} ><FontAwesome name='edit' />Edit</Button>{' '}
-                        <Button color="danger" size='xxl' key={e.no} onClick={() => this.setState({ id: e.no }, this.toggle)} ><FontAwesome name='trash' />Hapus</Button> 
+                        <Button color="danger" size='xxl' key={e.kd_buku} onClick={() => this.setState({ kd_buku: e.kd_buku }, this.toggle)} ><FontAwesome name='trash' />Hapus</Button> 
                     </td>
                  </tr>
              )
@@ -48,7 +48,7 @@ class ListBuku extends React.Component {
                 <Modals
                     modal={this.state.modal}
                     toggle={this.toggle}
-                    id={this.state.id}
+                    kd_buku={this.state.kd_buku}
                 />
                 <Table hover>
                     <thead>

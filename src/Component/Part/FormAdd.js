@@ -73,6 +73,18 @@ class FormAdd extends React.Component{
                     </Col>
                 </FormGroup>
                 <FormGroup row>
+                    <Label for="examplePassword" sm={2}>Keterangan</Label>
+                    <Col sm={10}>
+                        <Input
+                            type="text"
+                            name="keterangan"
+                            placeholder="Keterangan"
+                            value={this.props.ket}
+                            onChange={this.props.InputChangeHandler}
+                        />
+                    </Col>
+                </FormGroup>
+                <FormGroup row>
                     <Label for="examplePassword" sm={2}>Tahun</Label>
                     <Col sm={10}>
                         <Input

@@ -2,12 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Buku from './Part/Buku';
 import Navs from './Part/nav';
-import {
-    Container,
-    Row,
-    Col,
-} from 'reactstrap';
-// 
+
 class Home extends Component {
     constructor(props) {
         super(props)
@@ -38,7 +33,7 @@ class Home extends Component {
                 <Navs />
 
                 <div className="result">
-                    <Buku list={this.state.data} />
+                    <div><Buku list={this.state.data} /></div>
                 </div>
             </div>
         );

@@ -13,15 +13,14 @@ class EditBuku extends React.Component {
         super(props)
         this.state = { 
             data: [],
-            kd_buku:'',
             judul:'',
             isbn:'',
             cover:'',
             penulis:'',
             tahun:'',
             ket:'',
-            kategori:'',
-            no: this.props.match.params.no,
+            kategori_buku:'',
+            kd_buku: this.props.match.params.kd_buku,
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.InputChangeHandler = this.InputChangeHandler.bind(this)
@@ -38,7 +37,7 @@ class EditBuku extends React.Component {
                 penulis: data.penulis,
                 tahun: data.tahun,
                 ket: data.ket,
-                kategori: data.kategori,
+                kategori_buku: data.kategori_buku,
             })
         })
     }
@@ -57,7 +56,7 @@ class EditBuku extends React.Component {
         const data = this.state
         // delete data.id
         console.log(data)
-        axios.put('http://localhost:3001/buku/edit', data)
+        axios.put('http://localhost:3001/buku/edit/'+ this.state.kd_buku, data)
             .then((result) => {
                     console.log(result)
                     this.setState({ redirect: true })
@@ -78,11 +77,10 @@ class EditBuku extends React.Component {
                             <h2 >Edit Buku</h2><br />
                             <Forms
                                 props = {this.state.data}
-                                kd_buku={this.state.kd_buku}
                                 judul={this.state.judul}
                                 isbn={this.state.isbn}
                                 cover={this.state.cover}
-                                kategori={this.state.kategori}
+                                kategori_buku={this.state.kategori_buku}
                                 penulis={this.state.penulis}
                                 tahun={this.state.tahun}
                                 handleSubmit={this.handleSubmit}

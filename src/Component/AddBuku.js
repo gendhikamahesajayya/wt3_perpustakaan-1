@@ -13,14 +13,13 @@ class AddBuku extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            kd_buku: '',
             judul: '',
             isbn: '',
             cover: '',
             penulis: '',
             tahun: '',
             ket: '',
-            //kategori: '',
+            kategori_buku: '',
             redirect: false
         }
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -37,9 +36,9 @@ class AddBuku extends React.Component{
     }
     handleSubmit(e) {
         e.preventDefault();
-        const data = this.state
+        const data = [this.state]
         delete data.redirect
-        axios.post('http://localhost:3001/buku',data)
+        axios.post('http://localhost:3001/buku/save',data)
             .then((result) => {
                 console.log(result)
                 this.setState({redirect: true})
@@ -60,13 +59,13 @@ class AddBuku extends React.Component{
                         <Col sm="12" md={{ size: 8, offset: 2 }}>
                             <h2 >Tambah Buku</h2><br/>
                             <Form
-                                kd_buku={this.state.kd_buku}
                                 judul={this.state.judul}
                                 isbn={this.state.isbn}
                                 cover={this.state.cover}
                                 penulis={this.state.penulis}
                                 tahun={this.state.tahun}
-                                ket={this.state.kategori}
+                                ket={this.state.ket}
+                                kategori_buku={this.state.kategori_buku}
                                 InputChangeHandler={this.InputChangeHandler}
                                 handleSubmit={this.handleSubmit}
                             />

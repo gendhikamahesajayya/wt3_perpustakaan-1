@@ -13,18 +13,6 @@ class FormEdit extends React.Component{
         return(
             <Form onSubmit={this.props.handleSubmit}>
                 <FormGroup row>
-                    <Label for="exampleEmail" sm={2}>KD Buku</Label>
-                    <Col sm={10}>
-                        <Input
-                            name="kd_buku"
-                            type="text"
-                            placeholder="KD_Buku"
-                            value={this.props.kd_buku}
-                            onChange={this.props.InputChangeHandler}
-                        />
-                    </Col>
-                </FormGroup>
-                <FormGroup row>
                     <Label for="exampleEmail" sm={2}>Judul</Label>
                     <Col sm={10}>
                         <Input
@@ -68,6 +56,30 @@ class FormEdit extends React.Component{
                             name="penulis"
                             placeholder="Penulis"
                             value={this.props.penulis}
+                            onChange={this.props.InputChangeHandler}
+                        />
+                    </Col>
+                </FormGroup>
+                <FormGroup row>
+                    <Label for="examplePassword" sm={2}>Keterangan</Label>
+                    <Col sm={10}>
+                        <Input
+                            type="text"
+                            name="ket"
+                            placeholder="Keterangan"
+                            value={this.props.ket}
+                            onChange={this.props.InputChangeHandler}
+                        />
+                    </Col>
+                </FormGroup>
+                <FormGroup row>
+                    <Label for="exampleEmail" sm={2}>Kategori Buku</Label>
+                    <Col sm={10}>
+                        <Input
+                            name="kategori_buku"
+                            type="text"
+                            placeholder="Kategori_Buku"
+                            value={this.props.kategori_buku}
                             onChange={this.props.InputChangeHandler}
                         />
                     </Col>

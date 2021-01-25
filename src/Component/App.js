@@ -4,6 +4,7 @@ import Home from './Home';
 import Add from './AddBuku';
 import Edit from './EditBuku';
 import Dashboard from './Dashboard';
+import Login from './Login';
 import NoMatch from './NoMatch';
 
 
@@ -13,11 +14,12 @@ class App extends Component {
     return (
       <Router>
           <Switch>
-            <Route exact path='/' component={Dashboard} />
-            <Route exact path='/Home' component={Home} />
-            <Route exact path='/add' component={Add} />
-            <Route exact path='/edit/:no' component={Edit} />
-            <Route path="/buku" component={Dashboard} />
+            <Route exact path='/Dashboard' component={Dashboard} />
+            <Route exact path='/Manage_Data' component={Home} />
+            <Route exact path='/Add' component={Add} />
+            <Route exact path='/Edit/:kd_buku' component={Edit} />
+            <Route exact path='/Buku' component={Dashboard} />
+            <Route exact path='/' component={Login} />
             <Route component={NoMatch} />
           </Switch>
       </Router>

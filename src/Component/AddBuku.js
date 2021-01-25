@@ -15,11 +15,11 @@ class AddBuku extends React.Component{
         this.state = {
             judul: '',
             isbn: '',
-            cover: '',
             penulis: '',
             tahun: '',
-            ket: '',
+            cover: '',
             kategori_buku: '',
+            ket: '',
             redirect: false
         }
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -36,13 +36,21 @@ class AddBuku extends React.Component{
     }
     handleSubmit(e) {
         e.preventDefault();
-        const data = [this.state]
+        const data = this.state
         delete data.redirect
+
+        console.log(data);
         axios.post('http://localhost:3001/buku/save',data)
             .then((result) => {
-                console.log(result)
+                //console.log(result)
+                //console.log(result.data)
                 this.setState({redirect: true})
-                window.location.href = '/';
+                window.location.href = '/Dashboard';
+            })
+            .catch(({ response }) => { 
+                console.log(response.data);  
+                console.log(response.status);  
+                console.log(response.headers);  
             })
     }
 

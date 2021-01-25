@@ -26,18 +26,18 @@ class nav extends Component {
     render(){
         return(
             <Navbar color="faded" light expand="md">
-                <NavbarBrand href="/">Perpustakaan</NavbarBrand>
+                <NavbarBrand href="/Dashboard">Perpustakaan</NavbarBrand>
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={this.state.isOpen} navbar>
                     <Nav className="ml-auto" navbar>
                         <NavItem>
-                            <NavLink href="/">Home</NavLink>
+                            <NavLink href="/Buku">Home</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="/Home">Manage Data</NavLink>
+                            <NavLink href="/Manage_Data">Manage Data</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="/add">Tambah Data</NavLink>
+                            <NavLink href="/Add">Tambah Data</NavLink>
                         </NavItem>
                     </Nav>
                 </Collapse>

@@ -19,7 +19,14 @@ class Home extends Component {
 
     componentDidMount() {
 
-        axios.get('http://localhost:3001/buku')
+        let axiosConfig = {
+            headers: {
+                'Content-Type': 'application/json;charset=UTF-8',
+                "Access-Control-Allow-Origin": "*",
+            }
+          };
+
+        axios.get('http://localhost:3001/buku',axiosConfig)
             .then((results) => {
                 // const data = results.data.data;
                 delete this.state.data;

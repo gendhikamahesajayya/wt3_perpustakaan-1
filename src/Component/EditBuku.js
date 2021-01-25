@@ -25,12 +25,15 @@ class EditBuku extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this)
         this.InputChangeHandler = this.InputChangeHandler.bind(this)
     }
+
+    
     componentDidMount(){
-        axios.get('http://localhost:3001/buku/' + this.state.kd_buku)
+        //console.log(this.state.kd_buku);
+        const url = `http://localhost:3001/buku/` + this.state.kd_buku;
+        axios.get(url)
         .then((results) => {
-            const data = results.data.data
+            const data = results.data
             this.setState({
-                kd_buku: data.kd_buku,
                 judul: data.judul,
                 isbn: data.isbn,
                 cover: data.cover,
@@ -60,7 +63,7 @@ class EditBuku extends React.Component {
             .then((result) => {
                     console.log(result)
                     this.setState({ redirect: true })
-                    window.location.href = '/';
+                    window.location.href = '/Dashboard';
                 })
     }
         
@@ -76,13 +79,14 @@ class EditBuku extends React.Component {
                         <Col sm="12" md={{ size: 8, offset: 2 }}>
                             <h2 >Edit Buku</h2><br />
                             <Forms
-                                props = {this.state.data}
                                 judul={this.state.judul}
                                 isbn={this.state.isbn}
                                 cover={this.state.cover}
-                                kategori_buku={this.state.kategori_buku}
                                 penulis={this.state.penulis}
                                 tahun={this.state.tahun}
+                                ket={this.state.ket}
+                                kategori_buku={this.state.kategori_buku}
+                                InputChangeHandler={this.InputChangeHandler}
                                 handleSubmit={this.handleSubmit}
                             />
 

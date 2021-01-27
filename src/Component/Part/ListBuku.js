@@ -6,6 +6,7 @@ import Modals from './Modal';
 
 
 
+
 class ListBuku extends React.Component {
     constructor(props) {
         super(props)
@@ -51,7 +52,7 @@ class ListBuku extends React.Component {
                     toggle={this.toggle}
                     kd_buku={this.state.kd_buku}
                 />
-                <Table hover>
+                <Table striped>
                     <thead>
                         <tr>
                             <th>#</th>

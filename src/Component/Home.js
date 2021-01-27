@@ -43,14 +43,15 @@ class Home extends Component {
         return (
             <div>
                 <Navs />
-
-                <Container style={{marginLeft:0, marginTop: 15 }}>
+                <div style={{ width: '100%', display: 'flex', justifyContent: "center", alignItems: "center", marginLeft: "10%", marginRight: "20%" }}>
+                <Container style={{ marginTop: 15 }}>
                     <Row>
                         <Col sm="12" md={{ size: 7, offset:20}}>
                             <ListBuku list={this.state.data} />
                         </Col>
                     </Row>
                 </Container>
+                </div>
             </div>
         );
     }

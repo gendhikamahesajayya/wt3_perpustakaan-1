@@ -2,15 +2,17 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Buku from './Part/Buku';
 import Navs from './Part/nav';
+import { Card } from 'antd';
+import './App.css';
 
-class Home extends Component {
+class Dashboard extends Component {
     constructor(props) {
         super(props)
         this.state = {
             data: [],
         }
     }
-
+    
 
     componentDidMount() {
 
@@ -29,15 +31,31 @@ class Home extends Component {
         //console.table(this.state.data);
         //console.log(this.state.data)
         return (
-            <div>
-                <Navs />
 
-                <div className="result">
-                    <div><Buku list={this.state.data} /></div>
+            <>
+            <Navs />
+            
+            <Card 
+                style={{ width: '90%', display: 'inline-block', marginLeft: '5%', marginRight: '5%',paddingBottom:100 }}
+            >
+                {/* <Search placeholder="input search text" onSearch={onSearch} enterButton /> */}
+                <div>
+                <Buku
+                    list={this.state.data}
+                />
+                {/* {allSearchMovieList.map((item) =>
+                    <Buku
+                    list={this.state.data}
+                    />
+                )} */}
                 </div>
-            </div>
+            </Card>
+            
+            </>
         );
     }
 }
 
-export default Home;
+export default Dashboard;
+
+

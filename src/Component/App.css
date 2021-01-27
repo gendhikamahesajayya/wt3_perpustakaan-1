@@ -56,3 +56,148 @@ img{
     padding: 10px;
     height: -20px; /* Should be removed. Only for demonstration */
   }
+
+.custom-header {
+  background: #282c34;
+  padding: 10px 20px;
+}
+.custom-subheader{
+  align-self: center;
+  color: #909090;
+}
+.footer {
+  background: #FEDCBA;
+  height: 20px;
+  padding: 5px;
+  color: #654321;
+  text-align: center;
+}
+.App-footer{
+  background-color: #282c34;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  margin-top: 1rem;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.restaurants-list {
+  list-style: none;
+}
+
+.restaurants-list li {
+  display: inline-block;
+  width: 20%;
+  height: 165px;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #987654;
+  vertical-align: top;
+}
+
+.restaurants-list li .rating {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #AF0000;
+}
+
+.restaurants-list li .rating img {
+  height: 28px;
+  position: relative;
+  top: 5px;
+}
+
+.votesType {
+  font-size: small;
+  color: #909090;
+}
+.restaurantName{
+  font-size: 14px;
+  color: #000000;
+  font-weight: bold;
+}
+.restaurantMotto{
+  font-size: 12px;
+  color: #909090;
+}
+
+.restaurants-list li .city {
+  font-weight: bold;
+}
+
+.custom-header {
+    background: #282c34;
+    padding: 10px 20px;
+  }
+  .custom-subheader{
+    align-self: center;
+    color: #909090;
+  }
+  .footer {
+    background: #FEDCBA;
+    height: 20px;
+    padding: 5px;
+    color: #654321;
+    text-align: center;
+  }
+  .App-footer{
+    background-color: #282c34;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  .restaurants-list {
+    list-style: none;
+  }
+  
+  .restaurants-list li {
+    display: inline-block;
+    width: 20%;
+    height: 165px;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #987654;
+    vertical-align: top;
+  }
+  
+  .restaurants-list li .rating {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #AF0000;
+  }
+  
+  .restaurants-list li .rating img {
+    height: 28px;
+    position: relative;
+    top: 5px;
+  }
+  
+  .votesType {
+    font-size: small;
+    color: #909090;
+  }
+  .restaurantName{
+    font-size: 14px;
+    color: #000000;
+    font-weight: bold;
+  }
+  .restaurantMotto{
+    font-size: 12px;
+    color: #909090;
+  }
+  
+  .restaurants-list li .city {
+    font-weight: bold;
+  }
+

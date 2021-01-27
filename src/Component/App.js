@@ -5,6 +5,7 @@ import Add from './AddBuku';
 import Edit from './EditBuku';
 import Dashboard from './Dashboard';
 import Login from './Login';
+import Detail from './Detail';
 import NoMatch from './NoMatch';
 
 
@@ -18,6 +19,7 @@ class App extends Component {
             <Route exact path='/Manage_Data' component={Home} />
             <Route exact path='/Add' component={Add} />
             <Route exact path='/Edit/:kd_buku' component={Edit} />
+            <Route exact path='/Buku/:kd_buku' component={Detail} />
             <Route exact path='/Buku' component={Dashboard} />
             <Route exact path='/' component={Login} />
             <Route component={NoMatch} />
